@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HTML and CSS FAQ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 1900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #e0e0df;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #2980b9;
+            margin-top: 30px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+        h3 {
+            color: #3498db;
+            margin-top: 20px;
+        }
+        code {
+            background-color: #f8f8f8;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+            font-size: 0.9em;
+        }
+        pre {
+            background-color: #f8f8f8;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: monospace;
+            border: 1px solid #ddd;
+        }
+        .question {
+            font-weight: bold;
+            color: #16a085;
+            margin-top: 25px;
+        }
+        .section {
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed #ccc;
+        }
+        .top-link {
+            display: block;
+            text-align: right;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML and CSS Questions and Answers</h1>
+    
+    <div class="section">
+        <h2>HTML Questions</h2>
+        
+        <div class="question">What is the purpose of the &lt;head&gt; section in an HTML file?</div>
+        <p>
+            The <code>&lt;head&gt;</code> section contains metadata about the HTML document that isn't displayed on the page itself. It includes information like the document title, character encoding, linked stylesheets, scripts, SEO metadata, favicon references, and other important information that helps browsers properly render the page and search engines understand its content.
+        </p>
+        
+        <div class="question">How do you create a hyperlink in HTML? Provide an example.</div>
+        <p>
+            You create hyperlinks using the <code>&lt;a&gt;</code> (anchor) tag with the <code>href</code> attribute:
+        </p>
+        <pre>&lt;a href="https://www.example.com"&gt;Visit Example Website&lt;/a&gt;</pre>
+        
+        <div class="question">Which HTML tag is used to insert an image into a web page?</div>
+        <p>
+            The <code>&lt;img&gt;</code> tag is used to insert images:
+        </p>
+        <pre>&lt;img src="image.jpg" alt="Description of image"&gt;</pre>
+        
+        <div class="question">What's the difference between &lt;div&gt; and &lt;span&gt;?</div>
+        <p>
+            <ul>
+                <li><code>&lt;div&gt;</code> is a block-level element that creates a division or section in the document. It starts on a new line and takes up the full width available.</li>
+                <li><code>&lt;span&gt;</code> is an inline element used to group inline elements or apply styles to specific parts of text without breaking the flow of content.</li>
+            </ul>
+        </p>
+        
+        <div class="question">How can you create an unordered list and an ordered list in HTML?</div>
+        <p>Unordered list (with bullet points):</p>
+        <pre>&lt;ul&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2&lt;/li&gt;
+  &lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ul&gt;</pre>
+        
+        <p>Ordered list (with numbers):</p>
+        <pre>&lt;ol&gt;
+  &lt;li&gt;First item&lt;/li&gt;
+  &lt;li&gt;Second item&lt;/li&gt;
+  &lt;li&gt;Third item&lt;/li&gt;
+&lt;/ol&gt;</pre>
+        
+        <div class="question">How do you open a link in a new tab using HTML?</div>
+        <p>
+            Add the <code>target="_blank"</code> attribute to the anchor tag:
+        </p>
+        <pre>&lt;a href="https://www.example.com" target="_blank"&gt;Open in new tab&lt;/a&gt;</pre>
+        
+        <div class="question">How do you create a table in HTML? List the essential tags used.</div>
+        <p>Essential HTML table tags:</p>
+        <pre>&lt;table&gt;         &lt;!-- Defines the table --&gt;
+  &lt;thead&gt;       &lt;!-- Groups header content --&gt;
+    &lt;tr&gt;        &lt;!-- Defines a table row --&gt;
+      &lt;th&gt;      &lt;!-- Defines a header cell --&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;       &lt;!-- Groups body content --&gt;
+    &lt;tr&gt;        &lt;!-- Defines a table row --&gt;
+      &lt;td&gt;      &lt;!-- Defines a data cell --&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</pre>
+        
+        <div class="question">What is the purpose of the alt attribute in an &lt;img&gt; tag?</div>
+        <p>
+            The <code>alt</code> attribute provides alternative text for an image if it can't be displayed. It's essential for:
+        </p>
+        <ul>
+            <li>Accessibility for screen readers</li>
+            <li>SEO purposes</li>
+            <li>Displaying text if the image fails to load</li>
+            <li>Meeting web accessibility standards</li>
+        </ul>
+        
+        <div class="question">How do you apply internal CSS styles to an HTML page?</div>
+        <p>
+            Internal CSS is applied using the <code>&lt;style&gt;</code> tag in the <code>&lt;head&gt;</code> section of an HTML document:
+        </p>
+        <pre>&lt;head&gt;
+  &lt;style&gt;
+    body {
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+    }
+    h1 {
+      color: blue;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;</pre>
+        <a href="#top" class="top-link">Back to top</a>
+    </div>
+    
+    <div class="section">
+        <h2>CSS Questions</h2>
+        
+        <div class="question">What does CSS stand for, and what is its main purpose in web design?</div>
+        <p>
+            CSS stands for Cascading Style Sheets. Its main purpose is to separate the presentation and styling of web content from its structure (HTML). CSS allows designers to control the layout, colors, fonts, spacing, and visual appearance of web pages, providing consistency across a website and making it responsive to different devices.
+        </p>
+        
+        <div class="question">How do you apply CSS to an HTML element using an internal &lt;style&gt; tag?</div>
+        <pre>&lt;head&gt;
+  &lt;style&gt;
+    selector {
+      property: value;
+    }
+    /* Example */
+    p {
+      color: red;
+      font-size: 16px;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;</pre>
+        
+        <div class="question">What is the difference between inline, internal, and external CSS?</div>
+        <p>
+            <ol>
+                <li><strong>Inline CSS</strong>: Applied directly to individual HTML elements using the <code>style</code> attribute
+                <pre>&lt;p style="color: blue; font-size: 14px;"&gt;This is blue text&lt;/p&gt;</pre>
+                </li>
+                
+                <li><strong>Internal CSS</strong>: Defined within a <code>&lt;style&gt;</code> tag in the <code>&lt;head&gt;</code> section of an HTML document
+                <pre>&lt;head&gt;
+  &lt;style&gt;
+    p { color: blue; }
+  &lt;/style&gt;
+&lt;/head&gt;</pre>
+                </li>
+                
+                <li><strong>External CSS</strong>: Stored in a separate .css file and linked to the HTML document
+                <pre>&lt;head&gt;
+  &lt;link
